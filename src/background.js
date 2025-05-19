@@ -13,7 +13,6 @@ protocol.registerSchemesAsPrivileged([
 let mainWindow = null
 let tray = null
 async function createMainWindow() {
-    // 禁止程序多开
     if (!app.requestSingleInstanceLock()) {
         app.quit()
         return
